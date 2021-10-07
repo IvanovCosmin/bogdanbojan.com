@@ -1,1 +1,1 @@
-web: dist/yesod-heroku
+web: dist/MyBlog
