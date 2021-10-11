@@ -31,10 +31,6 @@ jobs:
       - store_artifacts:
           path: ~/app/dist
       - run:
-          name: "Add heroku to known hosts"
-          command: |
-            ssh-keyscan -H heroku.com >> ~/.ssh/known_hosts
-      - run:
           name: Setup Heroku
           command: bash .circleci/setup-heroku.sh
       - add_ssh_keys:
