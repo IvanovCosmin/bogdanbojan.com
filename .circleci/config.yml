@@ -30,7 +30,8 @@ jobs:
             - ~/.stack/
       - store_artifacts:
           path: ~/app/dist
-      - add_heroku_to_known_hosts:
+      - run:
+          name: "Add heroku to known hosts"
           command: |
             ssh-keyscan -H heroku.com >> ~/.ssh/known_hosts
       - run:
